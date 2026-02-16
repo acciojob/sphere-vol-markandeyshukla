@@ -7,9 +7,16 @@ function volume_sphere(e) {
     const pie=22/7;
 	const n=4/3;
 	let rad=Number(r.value);
-	let vs=n*pie*rad**3;
+	if(rad>0){
+		let vs=n*pie*rad**3;
+		vol.value=vs;
+	}else{
+		vol.value="NAN";
+	}
+	
 	// return vs;
-	vol.value=vs;
+	
+	
 } 
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
