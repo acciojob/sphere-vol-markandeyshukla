@@ -7,12 +7,13 @@ function volume_sphere(e) {
     const pie=22/7;
 	const n=4/3;
 	let rad=Number(r.value);
-	if(rad>0){
-		let vs=n*pie*rad**3;
-		vol.value=vs;
-	}else{
-		vol.value="NAN";
+	if(rad<0){
+		vol.value=NaN;
+		return;
 	}
+		let vs=n*pie*rad**3;
+		vol.value=vs.toFixed(4);
+	
 	
 	// return vs;
 	
