@@ -1,6 +1,15 @@
-function volume_sphere() {
-    //Write your code here
-  
+let r=document.getElementById("radius")
+let vol=document.getElementById("volume")
+let form=document.getElementById("MyForm")
+// submit.addEventListener("click",volume_sphere)
+function volume_sphere(e) {
+	e.preventDefault();
+    const pie=22/7;
+	const n=4/3;
+	let rad=Number(r.value);
+	let vs=n*pie*rad**3;
+	// return vs;
+	vol.value=vs;
 } 
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
